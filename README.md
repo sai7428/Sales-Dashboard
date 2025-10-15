@@ -1,96 +1,46 @@
 # 🧭 Interactive Sales Dashboard for a Mid-Sized Retail Company
 
-## 📘 Project Overview
-This repository contains the files for an **interactive sales dashboard** developed as the final project for the *“Visualization and Storytelling”* module.  
-The dashboard was built using **Microsoft Power BI** to analyze and visualize the **Supermarket Sales** dataset from [Kaggle](https://www.kaggle.com/datasets/aungpyaeap/supermarket-sales).
 
-The project simulates a real-world business scenario where a **Data Analyst** is tasked with providing clear, actionable insights to help a mid-sized retail company’s decision-makers optimize sales performance.
+## 🧩 How to Use This Dashboard with the Dataset
 
-The dashboard serves multiple stakeholders, including:
-- **VP of Sales** – for overall performance tracking  
-- **Branch Managers** – for location-based insights  
-- **Marketing Managers** – for understanding customer behavior and payment trends  
+To explore and interact with the Power BI dashboard using the dataset provided in this repository, follow these steps:
 
----
-
-## 🌟 Key Features
-
-The Power BI report is organized into **five interactive pages**, each answering specific business questions:
-
-### 1. **Main Dashboard**
-A high-level summary of core **Key Performance Indicators (KPIs)** including:
-- Total Sales  
-- Gross Income  
-- Average Customer Rating  
-- Transaction Volume  
+### 🔹 Step 1: Download the Dataset
+1. Go to the repository files above.  
+2. Locate and download the dataset file:  
+   **`SuperMarket Analysis.csv`**
+3. Save the file to a convenient location on your computer (e.g., `Documents/PowerBI Projects/`).
 
 ---
 
-### 2. **Regional Insights**
-Compares **sales performance**, **profitability**, and **customer satisfaction** across the three cities:
-- **Yangon**
-- **Naypyitaw**
-- **Mandalay**
+### 🔹 Step 2: Download the Power BI File
+1. In this repository, find and download the Power BI report file:  
+   **`Sales Dashboard.pbix`**
+2. Save it in the same folder as the dataset for convenience.
 
 ---
 
-### 3. **Product Performance**
-Analyzes **sales** and **profit contributions** by product line to:
-- Identify top-performing categories  
-- Inform inventory and marketing strategies  
+### 🔹 Step 3: Open in Microsoft Power BI Desktop
+1. Open **Microsoft Power BI Desktop**.  
+2. Go to **File → Open**, and select the `Sales Dashboard.pbix` file.  
+3. When prompted to connect to the dataset:
+   - Click **Transform Data → Edit Queries** (if needed).
+   - Make sure the file path in the **Source** step points to your downloaded CSV file.  
+     For example:
+     ```
+     Source = Csv.Document(File.Contents("C:\Users\<YourName>\Documents\PowerBI Projects\SuperMarket Analysis.csv"), [Delimiter=",", Columns=...])
+     ```
+   - Update the file path if necessary, then click **Close & Apply**.
 
 ---
 
-### 4. **Customer & Payment Insights**
-Explores customer behavior through:
-- **Demographics:** Gender and Customer Type (Member vs. Normal)  
-- **Payment Methods:** E-Wallet, Cash, and Credit Card preferences  
+### 🔹 Step 4: Explore the Interactive Dashboard
+Once the data is loaded:
+- Navigate between pages to explore **Sales KPIs, Regional Insights, Product Performance, Customer Behavior**, and **Time Forecasting**.  
+- Use slicers and filters to interact with different dimensions of the dataset.
 
 ---
 
-### 5. **Time Analysis & Forecasting**
-Visualizes:
-- Daily and monthly sales trends  
-- Future sales projections using Power BI’s built-in **forecasting tools**
-
----
-
-## 🧠 Technical Details
-
-**Tool Used:** Microsoft Power BI  
-**Dataset:** Supermarket Sales (Kaggle)  
-**Language:** Data Analysis Expressions (**DAX**)  
-
-### 🧮 Key DAX Measures
-
-- **Profit Margin %**
-  ```DAX
-  Profit Margin % = DIVIDE([Gross Income], [Total Sales], 0) * 100
+✅ **You are now ready to explore the fully functional Power BI dashboard using the dataset from this repository!**
 
 
-🚀 How to View This Project
-📄 View the Final Report
-
-The Sales Dashboard.docx file contains a detailed report describing:
-
-Project planning and design
-
-Data preparation and cleaning
-
-Dashboard development
-
-Final evaluation and insights
-
-💻 Explore the Interactive Dashboard
-
-Download and install Microsoft Power BI Desktop
-
-Download the .pbix file from this repository
-
-Open it in Power BI Desktop to explore the fully interactive dashboard
-
-🏁 Conclusion
-
-This project demonstrates how a static dataset can be transformed into a dynamic, story-driven dashboard that supports strategic decision-making for a retail business.
-
-It combines data visualization best practices, business storytelling, and analytical rigor to deliver clear, actionable insights for all levels of management.
